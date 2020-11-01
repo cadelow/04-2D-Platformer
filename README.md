@@ -19,6 +19,7 @@ Features included:
 + lives count
 + level 2
 + game over scene
++ music
 
 ## References
 None
