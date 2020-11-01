@@ -1,6 +1,28 @@
-# Godot-Project-Template
+# 04-2D-Platformer
+Project 4 -- 2D Platformer, 10 October 2020
 
-This is an empty Godot project that can be used as a starting place for Godot repositories. After creating and cloning the repository, download this as a zip file. Unzip it and copy the files into the repository folder. You should then be able to import the project.godot file (in the repository folder) as a project in Godot. Make sure you change the project name in the Project Settings.
+A simple 2D platformer game where player can control a character, help them collect coins, dodge enemies and move on to next levels.
 
 ## Implementation
 Created in Godot 3.2.2
+
+Assets are obtained from:
++ https://kenney.nl/assets/scribble-platformer
++ https://patrickdearteaga.com/
+
+Features included:
++ user-controlled player
++ camera
++ flying and ground enemies
++ coins
++ score system
++ health system
+
+## References
+None
+
+## Future Development
+None
+
+## Created by
+Cadence Low
