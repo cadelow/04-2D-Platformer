@@ -16,7 +16,9 @@ Features included:
 + flying and ground enemies
 + coins
 + score system
-+ health system
++ lives count
++ level 2
++ game over scene
 
 ## References
 None
