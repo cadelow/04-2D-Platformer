@@ -69,7 +69,11 @@ func is_on_left_wall():
 	return false
 
 func do_damage(d):
+	Global.decrease_lives()
+	Global.decrease_score(d)
 	queue_free()
+	print(Global.lives)
+	print(Global.score)
 
 func die():
 	queue_free()

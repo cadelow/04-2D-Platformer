@@ -9,3 +9,9 @@ func _ready():
 
 func increase_score(s):
 	score += s
+
+func decrease_score(d):
+	score -= d
+
+func decrease_lives():
+	lives -= 1

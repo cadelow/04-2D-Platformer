@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Camera.gd" type="Script" id=1]
 [ext_resource path="res://Assets/spritesheet_default.png" type="Texture" id=2]
@@ -8,8 +8,6 @@
 [ext_resource path="res://Assets/ghost_normal.png" type="Texture" id=6]
 [ext_resource path="res://Enemy/Enemy_Flying.gd" type="Script" id=7]
 [ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=8]
-
-[sub_resource type="TileSet" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -495,8 +493,6 @@ radius = 45.9528
 [sub_resource type="RectangleShape2D" id=39]
 extents = Vector2( 28, 40 )
 
-[sub_resource type="TileSet" id=38]
-
 [node name="Game" type="Node2D"]
 
 [node name="Sky" type="Node2D" parent="."]
@@ -513,22 +509,24 @@ __meta__ = {
 }
 
 [node name="Background" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 36 )
 collision_layer = 0
 collision_mask = 0
 format = 1
+tile_data = PoolIntArray( 458775, 16, 0, 458778, 16, 0 )
 
 [node name="Ground" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
 tile_set = SubResource( 36 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65537, 4, 0, -1, 4, 0, -65479, 4, 0, 65535, 4, 0, 57, 4, 0, 131071, 4, 0, 65593, 4, 0, 196607, 4, 0, 131129, 4, 0, 262143, 4, 0, 196665, 4, 0, 327679, 4, 0, 262201, 4, 0, 393215, 4, 0, 327737, 4, 0, 458751, 4, 0, 393273, 4, 0, 524287, 4, 0, 458809, 4, 0, 589821, 10, 0, 589822, 10, 0, 589823, 10, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 10, 0, 524314, 10, 0, 524315, 10, 0, 524316, 10, 0, 524317, 10, 0, 524318, 1, 0, 524319, 1, 0, 524320, 1, 0, 524321, 1, 0, 524322, 1, 0, 524323, 1, 0, 524324, 1, 0, 524325, 1, 0, 524326, 1, 0, 524327, 1, 0, 524328, 1, 0, 524329, 1, 0, 524330, 1, 0, 524331, 1, 0, 524332, 1, 0, 524333, 1, 0, 524334, 1, 0, 524335, 1, 0, 524336, 1, 0, 524337, 1, 0, 524338, 1, 0, 524339, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524343, 1, 0, 524344, 1, 0, 524345, 1, 0, 524346, 1, 0, 524347, 1, 0, 524348, 1, 0 )
+tile_data = PoolIntArray( -65537, 4, 0, -131036, 4, 0, -1, 4, 0, -65500, 4, 0, 65535, 4, 0, 36, 4, 0, 131071, 4, 0, 65572, 4, 0, 196607, 4, 0, 131108, 4, 0, 262143, 4, 0, 196644, 4, 0, 327679, 4, 0, 262180, 4, 0, 393215, 4, 0, 327716, 4, 0, 458751, 4, 0, 393252, 4, 0, 524287, 4, 0, 458788, 4, 0, 589821, 10, 0, 589822, 10, 0, 589823, 10, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 10, 0, 524314, 10, 0, 524315, 10, 0, 524316, 10, 0, 524317, 10, 0, 524318, 1, 0, 524319, 1, 0, 524320, 1, 0, 524321, 1, 0, 524322, 1, 0, 524323, 1, 0, 524324, 1, 0, 524325, 1, 0 )
 
 [node name="Platform" type="TileMap" parent="."]
 tile_set = SubResource( 36 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65537, 4, 0, -1, 4, 0, -65479, 4, 0, 65535, 4, 0, 57, 4, 0, 131071, 4, 0, 65593, 4, 0, 196607, 4, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131088, 7, 0, 131129, 4, 0, 262143, 4, 0, 196621, 0, 0, 196622, 0, 0, 196624, 11, 0, 196665, 4, 0, 327679, 4, 0, 262150, 0, 0, 262151, 0, 0, 262160, 2, 0, 262201, 4, 0, 393215, 4, 0, 327690, 0, 0, 327696, 2, 0, 327737, 4, 0, 458751, 4, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393232, 2, 0, 393273, 4, 0, 524287, 4, 0, 458768, 2, 0, 458809, 4, 0, 589821, 10, 0, 589822, 10, 0, 589823, 10, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 10, 0, 524314, 10, 0, 524315, 10, 0, 524316, 10, 0, 524317, 10, 0, 524318, 1, 0, 524319, 1, 0, 524320, 1, 0, 524321, 1, 0, 524322, 1, 0, 524323, 1, 0, 524324, 1, 0, 524325, 1, 0, 524326, 1, 0, 524327, 1, 0, 524328, 1, 0, 524329, 1, 0, 524330, 1, 0, 524331, 1, 0, 524332, 1, 0, 524333, 1, 0, 524334, 1, 0, 524335, 1, 0, 524336, 1, 0, 524337, 1, 0, 524338, 1, 0, 524339, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524343, 1, 0, 524344, 1, 0, 524345, 1, 0, 524346, 1, 0, 524347, 1, 0, 524348, 1, 0 )
+tile_data = PoolIntArray( 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131088, 7, 0, 196621, 0, 0, 196622, 0, 0, 196624, 11, 0, 196628, 7, 0, 196636, 7, 0, 262150, 0, 0, 262151, 0, 0, 262160, 2, 0, 262164, 8, 0, 262165, 15, 0, 262166, 15, 0, 262167, 15, 0, 262168, 15, 0, 262169, 15, 0, 262170, 15, 0, 262171, 15, 0, 262172, 8, 0, 327690, 0, 0, 327696, 2, 0, 327700, 14, 0, 327703, 16, 0, 327706, 16, 0, 327708, 14, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393232, 2, 0, 393236, 14, 0, 393239, 16, 0, 393242, 16, 0, 393244, 14, 0, 458768, 2, 0 )
 
 [node name="Player_Container" type="Node2D" parent="."]
 script = ExtResource( 4 )
@@ -537,10 +535,12 @@ script = ExtResource( 4 )
 position = Vector2( 20.8788, 0 )
 
 [node name="Enemy_Ground" type="KinematicBody2D" parent="Enemy_Container"]
-position = Vector2( 336.567, 488.35 )
+position = Vector2( 1580.5, 487.672 )
 collision_layer = 6
 collision_mask = 6
 script = ExtResource( 5 )
+max_constraint = 1750
+min_constraint = 1350
 
 [node name="Sprite" type="Sprite" parent="Enemy_Container/Enemy_Ground"]
 texture = ExtResource( 3 )
@@ -558,6 +558,7 @@ shape = SubResource( 37 )
 [node name="Enemy_Flying" type="KinematicBody2D" parent="Enemy_Container"]
 position = Vector2( 1043.81, 64.0414 )
 script = ExtResource( 7 )
+damage = 120
 
 [node name="Sprite" type="Sprite" parent="Enemy_Container/Enemy_Flying"]
 texture = ExtResource( 6 )
@@ -578,18 +579,22 @@ shape = SubResource( 39 )
 [node name="Coin" parent="Coin_Container" instance=ExtResource( 8 )]
 position = Vector2( 607.995, 105.516 )
 
+[node name="Coin2" parent="Coin_Container" instance=ExtResource( 8 )]
+position = Vector2( 1599.18, 350.149 )
+
 [node name="Foreground" type="TileMap" parent="."]
-tile_set = SubResource( 38 )
+tile_set = SubResource( 36 )
 collision_layer = 0
 collision_mask = 0
 format = 1
+tile_data = PoolIntArray( 458772, 14, 0, 458775, 16, 0, 458778, 16, 0, 458780, 14, 0 )
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 516.157, 217.159 )
 current = true
 limit_left = -200
 limit_top = -150
-limit_right = 4000
+limit_right = 2300
 limit_bottom = 630
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -632,5 +637,8 @@ margin_bottom = 35.0
 text = "Lives: "
 align = 2
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Enemy_Container/Enemy_Ground/Area2D" to="Enemy_Container/Enemy_Ground" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Enemy_Container/Enemy_Flying/Area2D" to="Enemy_Container/Enemy_Flying" method="_on_Area2D_body_entered"]
