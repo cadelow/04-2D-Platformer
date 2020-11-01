@@ -15,3 +15,5 @@ func decrease_score(d):
 
 func decrease_lives():
 	lives -= 1
+	if lives <= 0:
+		get_tree().change_scene("res://Levels/Game_Over.tscn")

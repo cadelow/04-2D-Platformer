@@ -31,6 +31,9 @@ func _physics_process(_delta):
 	
 	if is_on_floor():
 		double_jumped = false
+	
+	if position.y > 1500:
+		die()
 
 func is_moving():
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
