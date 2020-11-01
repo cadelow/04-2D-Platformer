@@ -68,5 +68,8 @@ func is_on_left_wall():
 		return true
 	return false
 
+func do_damage(d):
+	queue_free()
+
 func die():
 	queue_free()

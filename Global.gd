@@ -6,3 +6,6 @@ var level = 1
 
 func _ready():
 	pass
+
+func increase_score(s):
+	score += s
